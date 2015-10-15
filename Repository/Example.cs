@@ -82,7 +82,7 @@ namespace Repository
             var studyRepository = new StudyRepository();
 
             var referencedStudyKey = Guid.NewGuid();
-            studyRepository.Query(patient => patient.InstanceGuid == referencedStudyKey);
+            studyRepository.Query(study => study.InstanceGuid == referencedStudyKey);
         }
     }
 }
