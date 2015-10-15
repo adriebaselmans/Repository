@@ -28,7 +28,7 @@ namespace Repository
         public Guid InstanceGuid { get; set; }
     }
 
-    public interface IRepository<TKey, TDomainObject>
+    public interface IRepository<TKey, TDomainObject> where TDomainObject : IDomainObject
     {
         IEnumerable<TDomainObject> All();
         TDomainObject Get(TKey key);
