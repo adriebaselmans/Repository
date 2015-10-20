@@ -3,46 +3,46 @@ using System.Collections.Generic;
 using Repository.DomainObjects;
 using Repository.Interfaces;
 
-namespace Repository
+namespace Repository.Repositories
 {
-    internal class SeriesRepository : IRepository<Guid, Series>, IChildRelation<Document>, IParentRelation<Study>
+    public class StudyRepository : IRepository<Guid, Study>, IChildRelation<Series>, IParentRelation<Patient>
     {
-        public IEnumerable<Document> GetChildren()
+        public IEnumerable<Series> GetChildren()
         {
             throw new NotImplementedException();
         }
 
-        public IEnumerable<Document> GetChildren(Func<Document, bool> predicate)
+        public IEnumerable<Series> GetChildren(Func<Series, bool> predicate)
         {
             throw new NotImplementedException();
         }
 
-        public Study GetParent()
+        public Patient GetParent()
         {
             throw new NotImplementedException();
         }
 
-        public IEnumerable<Series> All()
+        public IEnumerable<Study> All()
         {
             throw new NotImplementedException();
         }
 
-        public Series Get(Guid key)
+        public Study Get(Guid key)
         {
             throw new NotImplementedException();
         }
 
-        public IEnumerable<Series> Query(Func<Series, bool> predicate)
+        public IEnumerable<Study> Query(Func<Study, bool> predicate)
         {
             throw new NotImplementedException();
         }
 
-        public Guid Add(Series item)
+        public Guid Add(Study item)
         {
             throw new NotImplementedException();
         }
 
-        public void Update(Guid key, Series item)
+        public void Update(Guid key, Study item)
         {
             throw new NotImplementedException();
         }

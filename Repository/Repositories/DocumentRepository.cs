@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Repository.DomainObjects;
 using Repository.Interfaces;
 
-namespace Repository
+namespace Repository.Repositories
 {
     internal class DocumentRepository : IRepository<Guid, Document>, IParentRelation<Series>
     {
