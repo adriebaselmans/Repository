@@ -5,7 +5,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{2E7AE827-4EAF-42EC-8638-9BCF94B55BE9}</ProjectGuid>
-    <OutputType>Library</OutputType>
+    <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Repository</RootNamespace>
     <AssemblyName>Repository</AssemblyName>
@@ -29,9 +29,13 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>Repository.Program</StartupObject>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -41,8 +45,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DomainObjects\Document.cs" />
+    <Compile Include="Storage\IMetaStreamReader.cs" />
+    <Compile Include="Storage\IMetaStreamWriter.cs" />
+    <Compile Include="Storage\MetaStreamWriter.cs" />
+    <Compile Include="Storage\MetaStreamReader.cs" />
     <Compile Include="Repositories\DocumentRepository.cs" />
-    <Compile Include="Example.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Interfaces\IChildRelation.cs" />
     <Compile Include="Interfaces\IDomainObject.cs" />
     <Compile Include="Interfaces\IParentRelation.cs" />
@@ -54,7 +62,18 @@
     <Compile Include="Repositories\SeriesRepository.cs" />
     <Compile Include="DomainObjects\Study.cs" />
     <Compile Include="Repositories\StudyRepository.cs" />
-    <Compile Include="Storage\Class1.cs" />
+    <Compile Include="Storage\BulkReference.cs" />
+    <Compile Include="Storage\BulkStreamReader.cs" />
+    <Compile Include="Storage\BulkStreamWriter.cs" />
+    <Compile Include="Storage\Disposable.cs" />
+    <Compile Include="Storage\IBulkStreamReader.cs" />
+    <Compile Include="Storage\IBulkStreamWriter.cs" />
+    <Compile Include="DomainObjects\ImageModel.cs" />
+    <Compile Include="Storage\IXRayRunModelWriter.cs" />
+    <Compile Include="Storage\JsonSerializer.cs" />
+    <Compile Include="DomainObjects\XrayRunModel.cs" />
+    <Compile Include="Storage\XRayRunModelWriter.cs" />
+    <Compile Include="Storage\StorageModels\XRayRunStorageModel.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
