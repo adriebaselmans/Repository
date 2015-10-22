@@ -20,7 +20,7 @@ namespace Repository.Storage
             var numBytes = bytes.Length;
             _binaryWriter.Write(bytes, 0, numBytes);
 
-            var bulkRef = new BulkReference(numBytes, _offset);
+            var bulkRef = new BulkReference(_offset, numBytes);
             _offset += bytes.Length;
 
             return bulkRef;
