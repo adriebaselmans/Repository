@@ -45,6 +45,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DomainObjects\Document.cs" />
+    <Compile Include="Storage\Constants.cs" />
     <Compile Include="Storage\IMetaStreamReader.cs" />
     <Compile Include="Storage\IMetaStreamWriter.cs" />
     <Compile Include="Storage\IXrayRunModelReader.cs" />
@@ -73,6 +74,7 @@
     <Compile Include="Storage\IXRayRunModelWriter.cs" />
     <Compile Include="Storage\JsonSerializer.cs" />
     <Compile Include="DomainObjects\XrayRunModel.cs" />
+    <Compile Include="Storage\XrayRunModelReader.cs" />
     <Compile Include="Storage\XRayRunModelWriter.cs" />
     <Compile Include="Storage\StorageModels\XRayRunStorageModel.cs" />
   </ItemGroup>
