@@ -3,8 +3,9 @@ using Repository.Interfaces;
 
 namespace Repository.DomainObjects
 {
-    public struct Study : IDomainObject
+    public struct Study : IDomainObject<Guid, Guid>
     {
-        public Guid InstanceGuid { get; set; }
+        public Guid Key { get; set; }
+        public Guid Id { get; set; }
     }
 }

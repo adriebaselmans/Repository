@@ -2,8 +2,9 @@
 
 namespace Repository.Interfaces
 {
-    public interface IDomainObject
+    public interface IDomainObject<TKey, TId>
     {
-        Guid InstanceGuid { get; set; }
+        TKey Key { get; set; }
+        TId Id { get; set; }
     }
 }
